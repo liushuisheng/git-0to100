@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Git 0 to 100 是一个面向团队协作与工程实践的 Git 最佳实践学习网站。">
+  <title>Git 0 to 100｜Git 最佳实践学习教练</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="主导航">
+      <a class="brand" href="#top" aria-label="Git 0 to 100 首页">
+        <span class="brand-mark">G</span>
+        <span>Git 0→100</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">菜单</button>
+      <div class="nav-links" id="nav-links">
+        <a href="#path">学习路径</a>
+        <a href="#playbook">最佳实践</a>
+        <a href="#practice">练习场</a>
+        <a href="#deploy">GitHub Pages</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section">
+      <div class="hero-copy">
+        <p class="eyebrow">从第一次 commit 到团队级交付</p>
+        <h1>把 Git 学成一种可靠的工程习惯</h1>
+        <p class="hero-text">Git 0 to 100 以真实工作流为主线，把命令、场景、规范和复盘串成可执行的学习路径，帮助学习者掌握提交、分支、合并、协作与发布的最佳实践。</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#path">开始学习</a>
+          <a class="button ghost" href="#practice">做一次诊断</a>
+        </div>
+      </div>
+      <div class="terminal-card" aria-label="Git 命令示例">
+        <div class="terminal-bar"><span></span><span></span><span></span></div>
+        <pre><code>$ git switch -c feature/docs
+$ git add .
+$ git commit -m "docs: add git workflow guide"
+$ git push -u origin feature/docs
+$ gh pr create --fill</code></pre>
+      </div>
+    </section>
+
+    <section class="section metrics" aria-label="学习收益">
+      <article><strong>6</strong><span>阶段路线</span></article>
+      <article><strong>24</strong><span>实践卡片</span></article>
+      <article><strong>12</strong><span>团队规范模板</span></article>
+      <article><strong>100%</strong><span>静态站点，适配 GitHub Pages</span></article>
+    </section>
+
+    <section class="section" id="path">
+      <div class="section-heading">
+        <p class="eyebrow">Learning Path</p>
+        <h2>循序渐进的产品化学习路径</h2>
+        <p>每个阶段都包含「为什么」「怎么做」「常见坑」「验收标准」，让学习者知道何时算真正掌握。</p>
+      </div>
+      <div class="timeline" id="timeline"></div>
+    </section>
+
+    <section class="section split" id="playbook">
+      <div>
+        <p class="eyebrow">Team Playbook</p>
+        <h2>将最佳实践沉淀为团队工作流</h2>
+        <p>网站不仅教命令，还把可落地的团队约定前置：小步提交、语义化提交、短生命周期分支、Pull Request 评审和发布标签。</p>
+        <ul class="check-list">
+          <li>用 Conventional Commits 提升变更可读性。</li>
+          <li>用 rebase / merge 策略解释历史整洁与审计追踪的权衡。</li>
+          <li>用冲突演练和回滚案例建立故障恢复能力。</li>
+        </ul>
+      </div>
+      <div class="practice-card">
+        <h3>今日最佳实践</h3>
+        <p id="daily-tip">加载中...</p>
+        <button class="button secondary" id="next-tip" type="button">换一个建议</button>
+      </div>
+    </section>
+
+    <section class="section" id="practice">
+      <div class="section-heading">
+        <p class="eyebrow">Practice Lab</p>
+        <h2>用交互诊断找到下一步</h2>
+        <p>选择你的当前状态，系统会推荐最适合的练习任务。</p>
+      </div>
+      <div class="quiz" role="group" aria-label="Git 学习诊断">
+        <button data-level="starter">我刚开始学习 Git</button>
+        <button data-level="solo">我会独立提交代码</button>
+        <button data-level="team">我参与团队协作</button>
+        <button data-level="lead">我要制定团队规范</button>
+      </div>
+      <article class="recommendation" id="recommendation" aria-live="polite">
+        <h3>推荐练习</h3>
+        <p>请选择一个状态，获得你的下一步学习任务。</p>
+      </article>
+    </section>
+
+    <section class="section deploy" id="deploy">
+      <div>
+        <p class="eyebrow">GitHub Pages Ready</p>
+        <h2>无需构建工具，直接发布到 GitHub Pages</h2>
+        <p>本项目采用纯静态 HTML、CSS、JavaScript。推送到 GitHub 后，在仓库 Settings → Pages 中选择当前分支和根目录即可访问。</p>
+      </div>
+      <ol class="steps">
+        <li>提交并推送当前分支。</li>
+        <li>打开 GitHub 仓库 Settings → Pages。</li>
+        <li>Source 选择 Deploy from a branch。</li>
+        <li>Branch 选择当前分支，Folder 选择 /root。</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Git 0 to 100. Learn Git by shipping better software.</p>
+  </footer>
+  <script src="assets/app.js"></script>
+</body>
+</html>
